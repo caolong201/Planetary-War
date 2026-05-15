@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public string firstLevel;
 
-    public GameObject continueButton;
+    private GameObject continueButton;
 
     // Start is called before the first frame update
     void Start()
