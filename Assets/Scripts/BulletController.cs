@@ -8,8 +8,6 @@ public class BulletController : MonoBehaviour
 
     public Rigidbody theRB;
 
-    public GameObject impactEffect;
-
     public int damage = 1;
 
     public bool damageEnemy, damagePlayer;
@@ -54,6 +52,5 @@ public class BulletController : MonoBehaviour
         }
 
         Destroy(gameObject);
-        Instantiate(impactEffect, transform.position + (transform.forward * (-moveSpeed * Time.deltaTime)), transform.rotation);
     }
 }
