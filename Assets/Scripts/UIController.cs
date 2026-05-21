@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIController : MonoBehaviour
 {
     public static UIController instance;
 
     public Slider healthSlider;
-    public Text healthText, ammoText;
+    public TextMeshProUGUI healthText, ammoText;
 
     public Image damageEffect;
     public float damageAlpha = .25f, damageFadeSpeed = 2f;

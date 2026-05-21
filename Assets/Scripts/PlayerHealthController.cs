@@ -23,7 +23,7 @@ public class PlayerHealthController : MonoBehaviour
 
         UIController.instance.healthSlider.maxValue = maxHealth;
         UIController.instance.healthSlider.value = currentHealth;
-        UIController.instance.healthText.text = "HEALTH: " + currentHealth + "/" + maxHealth;
+        UIController.instance.healthText.text = currentHealth.ToString();
     }
 
     // Update is called once per frame
@@ -62,7 +62,7 @@ public class PlayerHealthController : MonoBehaviour
 
 
             UIController.instance.healthSlider.value = currentHealth;
-            UIController.instance.healthText.text = "HEALTH: " + currentHealth + "/" + maxHealth;
+            UIController.instance.healthText.text = currentHealth.ToString();
         }
     }
 
@@ -76,6 +76,6 @@ public class PlayerHealthController : MonoBehaviour
         }
 
         UIController.instance.healthSlider.value = currentHealth;
-        UIController.instance.healthText.text = "HEALTH: " + currentHealth + "/" + maxHealth;
+        UIController.instance.healthText.text = currentHealth.ToString();
     }
 }

@@ -224,7 +224,7 @@ public class PlayerController : MonoBehaviour
 
             activeGun.fireCounter = activeGun.fireRate;
 
-            UIController.instance.ammoText.text = "AMMO: " + activeGun.currentAmmo;
+            activeGun.UpdateAmmoDisplay();
 
             muzzleFlash.SetActive(true);
         }
@@ -244,7 +244,7 @@ public class PlayerController : MonoBehaviour
         activeGun = allGuns[currentGun];
         activeGun.gameObject.SetActive(true);
 
-        UIController.instance.ammoText.text = "AMMO: " + activeGun.currentAmmo;
+        activeGun.UpdateAmmoDisplay();
 
         firePoint.position = activeGun.firepoint.position;
     }

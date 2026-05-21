@@ -12,7 +12,7 @@ public class Gun : MonoBehaviour
     [HideInInspector]
     public float fireCounter;
 
-    public int currentAmmo, pickupAmount;
+    public int currentAmmo, maxAmmo, pickupAmount;
 
     public Transform firepoint;
 
@@ -20,10 +20,21 @@ public class Gun : MonoBehaviour
 
     public string gunName;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        EnsureMaxAmmo();
+    }
+
+    void EnsureMaxAmmo()
+    {
+        if (maxAmmo <= 0)
+            maxAmmo = currentAmmo > 0 ? currentAmmo : 1;
+    }
+
+    public void UpdateAmmoDisplay()
+    {
+        EnsureMaxAmmo();
+        UIController.instance.ammoText.text = $"{currentAmmo}/{maxAmmo}";
     }
 
     // Update is called once per frame
@@ -39,6 +50,6 @@ public class Gun : MonoBehaviour
     {
         currentAmmo += pickupAmount;
 
-        UIController.instance.ammoText.text = "AMMO: " + currentAmmo;
+        UpdateAmmoDisplay();
     }
 }
