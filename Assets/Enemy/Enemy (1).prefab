@@ -295,7 +295,7 @@ MonoBehaviour:
   distanceToStop: 2
   agent: {fileID: 523198731971677583}
   keepChasingTime: 5
-  bullet: {fileID: 7058752092956904422, guid: b4e1f957423b30642bd839a758d2bcc4, type: 3}
+  bullet: {fileID: 128572, guid: fa1a1aed5fa6b6246be57e25900404a4, type: 3}
   firePoint: {fileID: 2011229232679748499}
   fireRate: 0.3
   waitBetweenShots: 2
